@@ -24,7 +24,7 @@ Compatible with all TTGO camera products, written by LewisHe
 // #define T_Camera_V05_VERSION
 // #define T_Camera_V16_VERSION
 // #define T_Camera_V162_VERSION
-// #define T_Camera_V17_VERSION
+#define T_Camera_V17_VERSION
 // #define ESPRESSIF_ESP_EYE
 
 /***************************************
@@ -43,8 +43,8 @@ Compatible with all TTGO camera products, written by LewisHe
 /***************************************
  *  WiFi
  **************************************/
-#define WIFI_SSID   "YourSSID"
-#define WIFI_PASSWD "YourPASSWORD"
+#define WIFI_SSID   "SpaceFi"
+#define WIFI_PASSWD "password"
 
 
 #include "select_pins.h"
@@ -372,18 +372,22 @@ bool setupCamera()
     config.pin_sscb_scl = SIOC_GPIO_NUM;
     config.pin_pwdn = PWDN_GPIO_NUM;
     config.pin_reset = RESET_GPIO_NUM;
-    config.xclk_freq_hz = 20000000;
+    config.xclk_freq_hz = 10000000;
     config.pixel_format = PIXFORMAT_JPEG;
     //init with high specs to pre-allocate larger buffers
+/*
     if (psramFound()) {
         config.frame_size = FRAMESIZE_UXGA;
         config.jpeg_quality = 10;
         config.fb_count = 2;
-    } else {
+    }
+    */
+
         config.frame_size = FRAMESIZE_SVGA;
         config.jpeg_quality = 12;
         config.fb_count = 1;
-    }
+
+
 #endif
 
 #if defined(ESPRESSIF_ESP_EYE) || defined(T_Camera_V162_VERSION) || defined(T_Camera_MINI_VERSION)

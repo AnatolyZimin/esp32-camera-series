@@ -1,15 +1,3 @@
-/*
-
- _                      _       _   _
-| |                    (_)     | | | |
-| |      ___ __      __ _  ___ | |_| |  ___
-| |     / _ \\ \ /\ / /| |/ __||  _  | / _ \
-| |____|  __/ \ V  V / | |\__ \| | | ||  __/
-\_____/ \___|  \_/\_/  |_||___/\_| |_/ \___|
-
-Compatible with all TTGO camera products, written by LewisHe
-03/28/2020
-*/
 
 #if defined(T_Camera_V16_VERSION)
 #define PWDN_GPIO_NUM       -1
@@ -212,7 +200,7 @@ Compatible with all TTGO camera products, written by LewisHe
 #define SIOC_GPIO_NUM       12
 
 #define Y9_GPIO_NUM         39
-#define Y8_GPIO_NUM         36
+#define Y8_GPIO_NUM         37
 #define Y7_GPIO_NUM         23
 #define Y6_GPIO_NUM         18
 #define Y5_GPIO_NUM         15
